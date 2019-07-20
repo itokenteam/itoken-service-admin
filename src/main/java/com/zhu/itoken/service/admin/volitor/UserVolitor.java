@@ -12,15 +12,11 @@ public class UserVolitor {
         BaseResoult baseResoult = null;
         List<BaseResoult.Error> errors = Lists.newArrayList();
         if (StringUtils.isEmpty(userName)) {
-            BaseResoult.Error error = new BaseResoult.Error();
-            error.setFiled("userName");
-            error.setMessage("登录名不能为空");
+            BaseResoult.Error error = new BaseResoult.Error("userName","登录名不能为空");
             errors.add(error);
         }
         if (StringUtils.isEmpty(password)) {
-            BaseResoult.Error error = new BaseResoult.Error();
-            error.setFiled("password");
-            error.setMessage("密码不能为空");
+            BaseResoult.Error error = new BaseResoult.Error("password","密码不能为空");
             errors.add(error);
         }
         if (StringUtils.isEmpty(password)||StringUtils.isEmpty(userName)) {
