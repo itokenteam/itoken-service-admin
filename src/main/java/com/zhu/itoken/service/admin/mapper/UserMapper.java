@@ -1,6 +1,7 @@
 package com.zhu.itoken.service.admin.mapper;
 
-import com.zhu.itoken.service.admin.domain.User;
+
+import com.zhu.itoken.common.domain.User;
 
 public interface UserMapper {
     int deleteByPrimaryKey(Integer id);
@@ -14,4 +15,6 @@ public interface UserMapper {
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+
+    void insetUser(User user);
 }
