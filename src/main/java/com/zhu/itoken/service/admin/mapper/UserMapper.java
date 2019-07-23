@@ -17,4 +17,6 @@ public interface UserMapper {
     int updateByPrimaryKey(User record);
 
     void insetUser(User user);
+
+
 }
